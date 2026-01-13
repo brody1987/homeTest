@@ -1,0 +1,229 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: #202124;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
+header {
+    padding: 10px 20px;
+    height: 48px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-right a {
+    color: rgba(0,0,0,0.87);
+    font-size: 13px;
+    line-height: 24px;
+}
+
+.icon-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.icon-button:hover {
+    background-color: rgba(60, 64, 67, 0.08);
+}
+
+.icon-button svg {
+    width: 24px;
+    height: 24px;
+    fill: #5f6368;
+}
+
+.login-button {
+    background-color: #1a73e8;
+    color: white !important;
+    padding: 9px 23px;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 14px;
+    margin-left: 8px;
+}
+
+.login-button:hover {
+    background-color: #2b7de9;
+    box-shadow: 0 1px 2px 0 rgba(66,133,244,0.3), 0 1px 3px 1px rgba(66,133,244,0.15);
+    text-decoration: none;
+}
+
+/* Main */
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* 위쪽 정렬 후 padding으로 조절 */
+    padding-top: 100px; /* 로고 위치 조절 */
+}
+
+.logo-container {
+    margin-bottom: 30px;
+    max-height: 92px;
+}
+
+.search-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-box {
+    width: 584px;
+    max-width: 90%;
+    height: 46px;
+    background: #fff;
+    border: 1px solid #dfe1e5;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    padding: 0 14px;
+    margin-bottom: 25px;
+    box-sizing: border-box; /* 패딩 포함 너비 계산 */
+}
+
+.search-box:hover, .search-box:focus-within {
+    box-shadow: 0 1px 6px rgba(32,33,36,.28);
+    border-color: rgba(223,225,229,0);
+}
+
+.search-icon {
+    display: flex;
+    align-items: center;
+    padding-right: 13px;
+}
+
+.search-icon svg {
+    width: 20px;
+    height: 20px;
+    fill: #9aa0a6;
+}
+
+.search-input {
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+    color: rgba(0,0,0,0.87);
+    word-wrap: break-word;
+    outline: none;
+    display: flex;
+    flex: 100%;
+    height: 34px;
+    font-size: 16px;
+}
+
+.voice-icon, .lens-icon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0 8px;
+}
+
+.voice-icon svg, .lens-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.buttons button {
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    padding: 0 16px;
+    height: 36px;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    background-color: #f8f9fa;
+    border: 1px solid #dadce0;
+    color: #202124;
+}
+
+/* Footer */
+footer {
+    background-color: #f2f2f2;
+    color: #70757a;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+
+.footer-row {
+    display: flex;
+    padding: 0 30px;
+}
+
+.footer-top {
+    height: 48px;
+    align-items: center;
+    border-bottom: 1px solid #dadce0;
+}
+
+.footer-bottom {
+    height: 48px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-left, .footer-right {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-bottom a {
+    color: #70757a;
+}
+
+@media screen and (max-width: 600px) {
+    .footer-bottom {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        gap: 15px;
+    }
+    
+    .footer-left, .footer-right {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
